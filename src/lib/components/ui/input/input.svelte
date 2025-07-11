@@ -1,7 +1,9 @@
 <script lang="ts">
 	import type { HTMLInputAttributes, HTMLInputTypeAttribute } from 'svelte/elements';
 	import { cn, type WithElementRef } from '$lib/utils.js';
-	import { Eye, EyeOff } from '@lucide/svelte';
+
+	import Eye from '@lucide/svelte/icons/eye';
+	import EyeOff from '@lucide/svelte/icons/eye-off';
 
 	type InputType = Exclude<HTMLInputTypeAttribute, 'file'>;
 

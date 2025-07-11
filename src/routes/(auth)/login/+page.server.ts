@@ -52,7 +52,7 @@ export const actions: Actions = {
 				maxAge: 60 * 60 * 24 * 7 // 1 week
 			});
 
-			redirect(303, '/');
+			redirect(303, '/dashboard');
 		} catch (error: any) {
 			// Rethrow if the error is a redirect (3xx)
 			if (error.status && error.status >= 300 && error.status < 400) throw error;

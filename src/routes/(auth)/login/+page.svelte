@@ -11,7 +11,9 @@
 	import { Input } from '$lib/components/ui/input';
 	import { Label } from '$lib/components/ui/label';
 	import * as Alert from '$lib/components/ui/alert';
-	import { CircleAlert, LoaderCircle } from '@lucide/svelte';
+
+	import CircleAlert from '@lucide/svelte/icons/circle-alert';
+	import LoaderCircle from '@lucide/svelte/icons/loader-circle';
 
 	let { form } = $props();
 
