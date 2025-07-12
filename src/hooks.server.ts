@@ -17,7 +17,8 @@ export const handle: Handle = async ({ event, resolve }) => {
 
 		event.locals.user = {
 			id: user.userId,
-			username: user.username
+			username: user.username,
+			token
 		};
 	}
 

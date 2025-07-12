@@ -3,7 +3,7 @@ import { fail, redirect } from '@sveltejs/kit';
 import type { Actions } from './$types';
 import { ENV } from '$env/static/private';
 
-export const actions: Actions = {
+export const actions = {
 	default: async ({ request, cookies, fetch }) => {
 		const formData = await request.formData();
 		const username = formData.get('username') as string;

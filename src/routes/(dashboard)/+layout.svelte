@@ -21,7 +21,7 @@
 	<AppSidebar />
 	<SidebarInset>
 		<header
-			class="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12"
+			class="bg-background fixed z-10 flex h-16 w-full shrink-0 items-center gap-2 shadow-md transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12"
 		>
 			<div class="flex items-center gap-2 px-4">
 				<SidebarTrigger class="-ml-1" />
@@ -29,7 +29,7 @@
 				{currentTab}
 			</div>
 		</header>
-		<div class="flex min-h-[calc(100vh_-4rem)] flex-col items-center justify-center">
+		<div class="mt-16 flex min-h-[calc(100vh_-4rem)] flex-col items-center justify-center">
 			{@render children()}
 		</div>
 	</SidebarInset>

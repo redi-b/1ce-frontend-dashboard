@@ -3,6 +3,7 @@
 type SessionData = {
 	id: string;
 	username: string;
+	token: string;
 };
 
 declare global {
