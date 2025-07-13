@@ -45,6 +45,7 @@
 	"dependencies": {
 		"@fontsource-variable/inter": "^5.2.6",
 		"@fontsource-variable/manrope": "^5.2.6",
+		"date-fns": "^4.1.0",
 		"jose": "^6.0.11",
 		"mode-watcher": "^1.1.0"
 	}

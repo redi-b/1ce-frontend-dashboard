@@ -6,6 +6,7 @@
 
 	import { cn } from '$lib/utils';
 
+	import Plus from '@lucide/svelte/icons/plus';
 	import LayoutDashboard from '@lucide/svelte/icons/layout-dashboard';
 	import Link from '@lucide/svelte/icons/link';
 	import ChartColumn from '@lucide/svelte/icons/chart-column';
@@ -48,12 +49,37 @@
 
 	<Separator />
 
-	<Sidebar.Content class={cn('mt-6', { 'px-1': !collapsed })}>
-		<Sidebar.Group>
+	<Sidebar.Content class={cn({ 'px-1': !collapsed })}>
+		<Sidebar.Group class="mt-2">
+			<Sidebar.Menu class="gap-4">
+				<Sidebar.MenuItem>
+					<Sidebar.MenuButton
+						tooltipContent="Create"
+						class="bg-theme hover:bg-theme-hover active:bg-theme mx-auto h-10 w-fit cursor-pointer items-center rounded-full px-4!"
+					>
+						{#snippet child({ props })}
+							<a href="/links/new" {...props}>
+								<Plus class={cn({ 'h-5! w-5!': !collapsed })} />
+								<span class="font-medium">Create</span>
+							</a>
+						{/snippet}
+					</Sidebar.MenuButton>
+				</Sidebar.MenuItem>
+			</Sidebar.Menu>
+		</Sidebar.Group>
+		<Separator />
+		<Sidebar.Group class="mt-2">
 			<Sidebar.Menu class="gap-4">
 				{#each sidebarLinks as link}
 					<Sidebar.MenuItem>
-						<Sidebar.MenuButton tooltipContent={link.name}>
+						<Sidebar.MenuButton
+							tooltipContent={link.name}
+							onclick={() => {
+								if (sidebar.isMobile) {
+									sidebar.toggle();
+								}
+							}}
+						>
 							{#snippet child({ props })}
 								<a href={link.href} {...props}>
 									<link.icon />

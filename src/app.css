@@ -110,7 +110,9 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  --color-theme: #2ecc71;
+  --color-theme: #27ae60;
+  --color-theme-hover: #2abb66;
+  --color-theme-active: #219150;
 
   --font-body: 'Inter Variable', sans-serif;
   --font-logo: 'Manrope Variable', sans-serif;

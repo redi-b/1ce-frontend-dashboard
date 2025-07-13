@@ -11,6 +11,7 @@
 	let currentTab = $derived.by(() => {
 		const path = page.url.pathname;
 		if (path.startsWith('/dashboard')) return 'Dashboard';
+		if (path.startsWith('/links/new')) return 'Create New Link';
 		if (path.startsWith('/links')) return 'Links';
 		if (path.startsWith('/analytics')) return 'Analytics';
 		return 'Home';
