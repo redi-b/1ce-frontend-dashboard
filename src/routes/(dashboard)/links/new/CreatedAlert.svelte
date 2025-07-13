@@ -4,9 +4,9 @@
 
 	import CircleCheck from '@lucide/svelte/icons/circle-check-big';
 	import Clipboard from '@lucide/svelte/icons/clipboard';
-	import X from '@lucide/svelte/icons/twitter';
-	import Telegram from '@lucide/svelte/icons/send';
-	import Whatsapp from '@lucide/svelte/icons/message-circle';
+	import X from '$lib/components/icons/x.svelte';
+	import Telegram from '$lib/components/icons/telegram.svelte';
+	import Whatsapp from '$lib/components/icons/whatsapp.svelte';
 	import { PUBLIC_LINKS_URL } from '$env/static/public';
 	import { toast } from 'svelte-sonner';
 
@@ -61,7 +61,7 @@
 						'_blank'
 					)}
 			>
-				<X size={16} class="mr-1" />
+				<X class="mr-1 dark:text-white" />
 				Share on X
 			</Button>
 			<Button
@@ -73,7 +73,7 @@
 						'_blank'
 					)}
 			>
-				<Telegram size={16} class="mr-1" />
+				<Telegram class="mr-1 text-[#26A5E4]" />
 				Share on Telegram
 			</Button>
 			<Button
@@ -87,7 +87,7 @@
 						'_blank'
 					)}
 			>
-				<Whatsapp size={16} class="mr-1" />
+				<Whatsapp class="mr-1 text-[#25D366]" />
 				Share on WhatsApp
 			</Button>
 		</div>
