@@ -57,6 +57,11 @@
 					<Sidebar.MenuButton
 						tooltipContent="Create"
 						class="bg-theme hover:bg-theme-hover active:bg-theme mx-auto h-10 w-fit cursor-pointer items-center rounded-full px-4! text-white hover:text-white"
+						onclick={() => {
+							if (sidebar.isMobile) {
+								sidebar.toggle();
+							}
+						}}
 					>
 						{#snippet child({ props })}
 							<a href="/links/new" {...props}>
