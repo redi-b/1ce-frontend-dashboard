@@ -12,7 +12,7 @@
 		const path = page.url.pathname;
 		if (path.startsWith('/dashboard')) return 'Dashboard';
 		if (path.startsWith('/links/new')) return 'Create New Link';
-		if (path.startsWith('/links')) return 'Links';
+		if (path.startsWith('/links')) return 'Your Links';
 		if (path.startsWith('/analytics')) return 'Analytics';
 		return 'Home';
 	});
@@ -30,7 +30,7 @@
 				{currentTab}
 			</div>
 		</header>
-		<div class="mt-16 flex min-h-[calc(100vh_-4rem)] flex-col items-center justify-center">
+		<div class="mt-16 min-h-[calc(100vh_-4rem)]">
 			{@render children()}
 		</div>
 	</SidebarInset>

@@ -55,7 +55,7 @@
 				<Sidebar.MenuItem>
 					<Sidebar.MenuButton
 						tooltipContent="Create"
-						class="bg-theme hover:bg-theme-hover active:bg-theme mx-auto h-10 w-fit cursor-pointer items-center rounded-full px-4!"
+						class="bg-theme hover:bg-theme-hover active:bg-theme mx-auto h-10 w-fit cursor-pointer items-center rounded-full px-4! text-white hover:text-white"
 					>
 						{#snippet child({ props })}
 							<a href="/links/new" {...props}>

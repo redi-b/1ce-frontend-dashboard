@@ -8,7 +8,7 @@
 	import Telegram from '$lib/components/icons/telegram.svelte';
 	import Whatsapp from '$lib/components/icons/whatsapp.svelte';
 	import { PUBLIC_LINKS_URL } from '$env/static/public';
-	import { toast } from 'svelte-sonner';
+	import { copyToClipboard } from '$lib/utils/copy';
 
 	interface Props {
 		slug: string;
@@ -35,13 +35,12 @@
 			<Button
 				variant="ghost"
 				size="sm"
-				onclick={() => {
-					try {
-						navigator.clipboard.writeText(`${PUBLIC_LINKS_URL}/${slug}`);
-						toast.success('Copied to clipboard!');
-					} catch (error) {
-						toast.error('Failed to copy!');
-					}
+				onclick={async () => {
+					await copyToClipboard(
+						`${PUBLIC_LINKS_URL}/${slug}`,
+						'Link copied to clipboard!',
+						'Failed to copy link. Please try again.'
+					);
 				}}
 				class="flex items-center gap-1 bg-gray-700 text-gray-200 hover:bg-gray-600"
 			>
@@ -49,7 +48,7 @@
 				Copy
 			</Button>
 		</div>
-		<div class="flex gap-2">
+		<div class="flex flex-col gap-2 lg:flex-row">
 			<Button
 				variant="outline"
 				size="sm"
