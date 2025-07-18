@@ -6,7 +6,7 @@
 
 	import AppSidebar from '$lib/components/app-sidebar.svelte';
 
-	let { children } = $props();
+	let { children, data } = $props();
 
 	let currentTab = $derived.by(() => {
 		const path = page.url.pathname;
@@ -19,10 +19,10 @@
 </script>
 
 <SidebarProvider>
-	<AppSidebar />
+	<AppSidebar username={data.user.username} />
 	<SidebarInset>
 		<header
-			class="bg-background fixed z-10 flex h-16 w-full shrink-0 items-center gap-2 shadow-md transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12"
+			class="bg-background fixed z-10 flex h-16 w-full shrink-0 items-center gap-2 shadow-md transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12 dark:shadow-black/35"
 		>
 			<div class="flex items-center gap-2 px-4">
 				<SidebarTrigger class="-ml-1" />

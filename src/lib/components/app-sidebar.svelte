@@ -17,8 +17,9 @@
 	let {
 		ref = $bindable(null),
 		collapsible = 'icon',
+		username = '',
 		...restProps
-	}: ComponentProps<typeof Sidebar.Root> = $props();
+	}: ComponentProps<typeof Sidebar.Root> & { username?: string } = $props();
 
 	const sidebar = Sidebar.useSidebar();
 	const collapsed = $derived(sidebar.state == 'collapsed');
@@ -94,7 +95,7 @@
 	</Sidebar.Content>
 
 	<Sidebar.Footer>
-		<NavUser username={'rediet'} />
+		<NavUser {username} />
 	</Sidebar.Footer>
 
 	<Sidebar.Rail />
