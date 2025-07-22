@@ -130,4 +130,8 @@
   .container {
     @apply px-4 sm:px-6 lg:px-8;
   }
+
+  .bprogress .bar {
+    @apply bg-theme! h-0.75!;
+  }
 }
